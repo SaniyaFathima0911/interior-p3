@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior-About us</title>
+    <link rel="icon" href="istockphoto-1341588764-612x612.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 2100px;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            width: 20%;
+            padding: 5px 0;
+        }
+
+        .list ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .list li {
+            list-style: none;
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: #211f2c;
+            font-family: "Jost", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .list li a:hover {
+            color: #c8a676;
+        }
+
+        #about {
+            color: #c8a676;
+        }
+
+        .about {
+            width: 100%;
+            height: 60vh;
+            background-image: url("image-modern-bed3.jpg");
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 70px;
+        }
+
+        .header {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(50, 50, 50, 0.7);
+            background-color: rgb(0 0 0 / 40%);
+            font-family: 'poppins', sans-serif;
+            filter: brightness(1);
+            /* position: relative; */
+        }
+
+        .header h1 {
+            font-size: 50px;
+            color: #f9f9f9;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: rgb(206, 206, 206);
+        }
+
+        .us {
+            width: 90%;
+            height: 650px;
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .img {
+            width: 550px;
+            height: 650px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+
+        .content {
+            width: 550px;
+            height: 650px;
+            border: 2px solid #211f2c;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            font-family: "Jost", sans-serif;
+        }
+
+        .content h1 {
+            font-size: 30px;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+
+        .footer {
+            background-color: #272535;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            /* height: 450px; */
+        }
+
+        .foot {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 80px 0 0 0;
+        }
+
+        .foot1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .foot1 h2 {
+            color: #c4a676;
+            font-family: "Playfair", serif;
+            font-weight: inherit;
+            font-size: 24px;
+        }
+
+        .foot1 li {
+            color: #f9f9f9;
+            line-height: 30px;
+            list-style: none;
+            font-family: "Jost", sans-serif;
+        }
+
+        .foot1 a {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+        .foot1 a:hover {
+            color: #c8a676;
+            text-decoration: underline;
+        }
+
+        .foot1 p {
+            color: white;
+            font-family: "Jost", sans-serif;
+        }
+
+        .form {
+            display: flex;
+        }
+
+        .control {
+            display: block;
+            width: 50%;
+            padding: 10px 10px;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: white;
+            background-color: #ffffff30;
+            background-clip: padding-box;
+            border: 1px solid #676767;
+            appearance: none;
+            border-top-left-radius: .375rem;
+            border-bottom-left-radius: .375rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            outline: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            border: 0;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            font-size: 1rem;
+            line-height: 1rem;
+            justify-content: center;
+            padding: .1rem 1rem;
+            color: #141414;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            --box-shadow-color: #c8a676;
+            background-color: #c8a676;
+        }
+
+        .control::placeholder {
+            color: white;
+            font-size: 14px;
+        }
+
+        .icons {
+            background-color: #211f2c;
+            height: 60px;
+            border-bottom: 1px solid rgba(79, 79, 79, 0.836);
+        }
+
+        .icons ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icons li {
+            list-style: none;
+            line-height: 60px;
+        }
+
+        .icons i {
+            font-size: 18px;
+            transition: 0.5s ease;
+        }
+        .icons i:hover{
+            transform: scale(1.5);
+        }
+
+        .rights {
+            height: 50px;
+            background-color: #211f2c;
+        }
+
+        .rights p {
+            color: white;
+            font-family: "Jost", sans-serif;
+            font-size: 13px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #272535;
+            font-family: "Jost", sans-serif;
+            /* padding: 90px 0px 0px 0; */
+            position: relative;
+            gap: 10px;
+        }
+
+        .head h1 {
+            font-size: 50px;
+        }
+
+        .head p {
+            font-size: 15px;
+            color: #c4a676;
+            position: relative;
+        }
+
+        .head p::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 80px;
+            right: 90px;
+            bottom: 11px;
+            background-color: #c8a676;
+        }
+
+        .head p::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 80px;
+            left: 90px;
+            bottom: 11px;
+            background-color: #c8a676;
+        }
+        .wide{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 100px;
+            justify-content: center;
+            margin: 90px 0 0 0;
+        }
+
+        .whole {
+            width: 90%;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            font-family: "Jost", sans-serif;
+            align-items: center;
+        }
+
+        .designer {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .image {
+            width: 250px;
+            height: 350px;   
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+        .image:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        .image:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .overlay h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .overlay p {
+            font-size: 16px;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text h3 {
+            font-size: 25px;
+        }
+
+        .text p {
+            font-size: 16px
+        }
+       
+        .content-dec {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 36px;
+            z-index: 10;
+            margin-left: -18px;
+        }
+
+        .content-dec:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: #c8a676;
+            border-radius: 50%;
+            margin-left: -3px;
+            z-index: 10;
+        }
+
+        .content-dec:after {
+            content: '';
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            width: 1px;
+            height: 25px;
+            background: #bbb9b9;
+            z-index: 10;
+        }
+
+        .content-dec span {
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            background: #ffffff;
+            z-index: 1;
+            transform: rotate(45deg);
+            box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="istockphoto-1341588764-612x612-removebg-preview.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a id="about" href="about us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </section>
+    <section>
+        <div class="about">
+            <div class="header">
+                <h1>About Us</h1>
+                <p>Discover Our Passion for Creating Timeless and Innovative Designs</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="us">
+            <div class="img">
+                <img src="view-luxurious-hotel-interior-space (2).jpg" alt="">
+            </div>
+            <div class="content">
+                <h1>Our Passion for Interior Design</h1>
+                <p>At Interioz, we believe that exceptional interior design goes beyond aesthetics; it’s about creating
+                    spaces that inspire, function seamlessly, and respect the environment. Our passion lies in
+                    understanding the unique needs and desires of our clients, ensuring that each project reflects their
+                    individuality and enhances their daily lives.</p>
+                <p>We immerse ourselves in the latest design trends and sustainable practices, constantly pushing the
+                    boundaries of what’s possible. Our commitment to innovation and excellence allows us to transform
+                    ordinary spaces into extraordinary experiences, blending beauty with practicality in every detail.
+                </p>
+                <p>With a keen eye for detail and a dedication to quality, we strive to create interiors that are not
+                    only visually stunning but also harmonious and functional. At Interioz, we are driven by the belief
+                    that great design has the power to improve lives, and we are dedicated to making that vision a
+                    reality for each of our clients.</p>
+                <p>We collaborate closely with our clients throughout the entire design process, ensuring that their
+                    vision is brought to life in a way that is both beautiful and practical. By integrating
+                    environmentally responsible practices, we create spaces that are not only visually stunning but also
+                    harmonious with the environment.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wide">
+            <div class="whole">
+                <div class="head">
+                    <h1>Our Design Innovators</h1>
+                    <p>Creative Crew</p>
+                </div>
+                <div class="designer">
+                    <div class="member">
+                        <div class="image">
+                            <img src="designer.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Senior Interior Designer</h2>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>Saadi Yousuf</h3>
+                            <!-- <p>Lead Designer</p> -->
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="image">
+                            <img src="designer3.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Lead Content Strategist</h2>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>Ayeshey Gul</h3>
+                            <!-- <p>Senior Intetior Architect</p> -->
+                        </div>
+                    </div>
+                    <div class="member">
+                        <div class="image">
+                            <img src="designer2.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Senior Project Manager</h2>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>Humain Sikander</h3>
+                            <!-- <p>Senior Project Manager</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="content-dec" id="span"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="foot">
+                <div class="foot1">
+                    <h2>Contact info</h2>
+                    <ul>
+                        <li>Call :+90 216 5463546</li>
+                        <li>Email :interiordesign@gmail.com</li>
+                        <li>Find Us :Istiklal Street, Turkiye </li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Residential Design</a></li>
+                        <li><a href="#">Commercial Design</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Renovation Services</a></li>
+                        <li><a href="#">Lighting Design</a></li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Helpful links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Subscribe</h2>
+                    <p>Want to be notified. Just sign up and we'll send you a notification by email.</p>
+                    <form>
+                        <div class="form">
+                            <input type="email" name="myEmail" placeholder="Your Email" class="control" required="">
+                            <button type="submit" class="btn"><i class="fa-solid fa-arrow-right"
+                                    style="color: #000000;"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="free">
+            <div class="icons">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #c8a676;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram" style="color: #c8a676;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter" style="color: #c8a676;"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #c8a676;"></i></a></li>
+                </ul>
+            </div>
+            <div class="rights">
+                <p><i class="fa-regular fa-copyright" style="color: #ffffff;font-size: 13px;"></i> INTERIOR 2024. ALL
+                    RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
+
+</html>
