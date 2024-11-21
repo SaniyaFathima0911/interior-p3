@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior-Home</title>
-    <link rel="icon" href="istockphoto-1341588764-612x612.jpg">
+    <title>Interioz</title>
+    <link rel="icon" href="logof.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,12 +34,19 @@
             justify-content: space-between;
             align-items: center;
             background-color: #f9f9f9;
-            padding: 0 20px;
+            padding: 0 8px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .logo img {
-            width: 20%;
-            padding: 5px 0;
+            width: 21%;
+            filter: brightness(0.7);
+            padding: 2px 0;
         }
 
         .list ul {
@@ -58,12 +65,15 @@
             font-size: 18px;
             font-weight: 600;
         }
-        .list li a:hover{
+
+        .list li a:hover {
             color: #c8a676;
         }
-        #home{
+
+        #home {
             color: #c8a676;
         }
+
         #slider {
             overflow: hidden;
         }
@@ -122,54 +132,7 @@
 
         }
 
-        /* .slider {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            animation: slideAnimation 20s infinite;
-        }
-
-        #slide1 {
-            background-image: url('image-modern2.jpg');
-            animation-delay: 0s;
-        }
-
-        #slide2 {
-            background-image: url('image-ottoman.jpg');
-            animation-delay: 4s;
-        }
-
-        #slide3 {
-            background-image: url('image-modern-bed.jpg');
-            animation-delay: 8s;
-        }
-
-        #slide4 {
-            background-image: url('image-modern-bed3.jpg');
-            animation-delay: 12s;
-        }
-
-        #slide5 {
-            background-image: url('image-kitchen.jpg');
-            animation-delay: 16s;
-        } */
-
         .text {
-            /* position: absolute;
-            top: 0;
-            left: 0; */
             width: 100%;
             height: 100vh;
             display: flex;
@@ -193,27 +156,6 @@
             font-size: 40px;
         }
 
-        /* @keyframes slideAnimation {
-            0% {
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            25% {
-                opacity: 1;
-            }
-
-            45% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        } */
         .main {
             display: flex;
             flex-direction: column;
@@ -296,40 +238,45 @@
             text-align: center;
             transition: 0.5s ease;
         }
-        .para a:hover{
+
+        .para a:hover {
             color: #211f2c;
             background-color: #c4a676;
-            font-size:18px ;
+            font-size: 18px;
         }
-
-        /* .slideshow-container {
-            width: 50%;
-            height: 35rem;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slides {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            animation: slideAnimation 12s infinite;
-        }
-
-        .slides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        } */
 
         .slider {
             position: relative;
             width: 560px;
             height: 30rem;
             overflow: hidden;
+        }
+
+        .image {
+            width: 20%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #image1 {
+            background-image: url('image-modern2.jpg');
+        }
+
+        #image2 {
+            background-image: url('image-ottoman.jpg');
+        }
+
+        #image3 {
+            background-image: url('image-modern-bed.jpg');
+        }
+
+        #image4 {
+            background-image: url('image-kitchen.jpg');
+        }
+
+        #image5 {
+            background-image: url('image-modern2.jpg');
         }
 
         .slide {
@@ -406,44 +353,16 @@
             }
         }
 
-        /* @keyframes slideAnimation {
-            0% {
-                opacity: 1;
-            }
-
-            25% {
-                opacity: 1;
-            }
-
-            33.33% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .slides:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .slides:nth-child(2) {
-            animation-delay: 4s;
-        }
-
-        .slides:nth-child(3) {
-            animation-delay: 8s;
-        } */
-        .wide{
+        .wide {
             width: 100%;
             background-color: #e9e9e9;
             display: flex;
             flex-direction: column;
             gap: 100px;
             margin-top: 100px;
-            padding:50px 0 0 0 ;
+            padding: 50px 0 0 0;
         }
+
         .whole {
             display: flex;
             flex-direction: column;
@@ -468,7 +387,7 @@
             position: relative;
         }
 
-        .head h1 {
+        .head h3 {
             font-size: 70px;
         }
 
@@ -722,7 +641,8 @@
         #span span {
             background-color: #ffffff;
         }
-        .wider{
+
+        .wider {
             display: flex;
             flex-direction: column;
             gap: 100px;
@@ -736,8 +656,9 @@
             gap: 50px;
             max-width: 2100px;
         }
+
         .services {
-            width:90% ;
+            width: 90%;
             margin: auto;
             display: flex;
             position: relative;
@@ -802,7 +723,8 @@
             transition: 0.4s ease;
             cursor: pointer;
         }
-        .img i:hover{
+
+        .img i:hover {
             background-color: #272535;
         }
 
@@ -847,21 +769,25 @@
             text-align: center;
             transition: 0.5s ease;
         }
-        .idea a:hover{
+
+        .idea a:hover {
             background-color: #c8a676;
             color: #211f2c;
         }
-        .creative{
+
+        .creative {
             padding: 100px 0 0 0;
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
-        .whole{
+
+        .whole {
             display: flex;
             flex-direction: column;
             gap: 40px;
         }
+
         .container {
             display: flex;
             justify-content: center;
@@ -885,7 +811,8 @@
         .card-img {
             width: 350px;
             height: 270px;
-            border-radius: 1.5rem;
+            border-radius: 15px;
+            object-fit: cover;
         }
 
         .card-img img {
@@ -912,7 +839,7 @@
             justify-content: center;
             padding: 10px;
         }
-        
+
         .card-description {
             display: block;
             font-size: 14px;
@@ -923,11 +850,13 @@
             font-weight: 500;
             color: black;
         }
-         .class-button{
+
+        .class-button {
             text-decoration: none;
             color: rgb(35, 35, 59);
             font-weight: 500;
-         }
+        }
+
         .card-button {
             text-decoration: none;
             font-size: 15px;
@@ -947,7 +876,8 @@
         .card-article:not(:hover) {
             animation: show-overflow 2s forwards;
         }
-        .card-article:not(:hover) .card-data{
+
+        .card-article:not(:hover) .card-data {
             animation: remove-data 1s forwards;
         }
 
@@ -991,33 +921,13 @@
                 overflow: hidden;
             }
         }
-        /* .projects{
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .project{
-            display: flex;
-            flex-wrap: wrap;
-            width: 90%;
-            margin: auto;
-            justify-content: space-between;
-        }
-        .latest{
-            width: 32%;
-            height: 270px;
-        }
-        .latest img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        } */
+
+
         .footer {
             background-color: #272535;
             max-width: 2100px;
             height: auto;
-            display:flex ;
+            display: flex;
             flex-direction: column;
             gap: 80px;
             /* height: 450px; */
@@ -1139,7 +1049,8 @@
             font-size: 18px;
             transition: 0.5s ease;
         }
-        .icons i:hover{
+
+        .icons i:hover {
             transform: scale(1.5);
         }
 
@@ -1155,6 +1066,1031 @@
             text-align: center;
             line-height: 50px;
         }
+
+        @media (min-width:992px) and (max-width:1200px) {
+
+            .main {
+                gap: 45px;
+            }
+
+            .content {
+                width: 95%;
+                margin: auto;
+                height: 28rem;
+                gap: 40px;
+            }
+
+            .dream {
+                margin: 100px 0 0 0;
+            }
+
+            .h1 h1 {
+                font-size: 65px;
+                line-height: 65px;
+            }
+
+            .slider {
+                width: 50%;
+                height: 28rem;
+            }
+
+            #slide1 {
+                height: 28rem;
+            }
+
+            #slide2 {
+                height: 28rem;
+            }
+
+            #slide3 {
+                height: 28rem;
+            }
+
+            #slide4 {
+                height: 28rem;
+            }
+
+            .para {
+                width: 50%;
+                height: 28rem;
+                gap: 14px;
+            }
+
+            .para h6 {
+                font-size: 17px;
+            }
+
+            .para h4 {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .para a {
+                height: 44px;
+                line-height: 44px;
+                width: 130px;
+            }
+
+            .head h3 {
+                font-size: 65px;
+            }
+
+            .wide {
+                margin-top: 90px;
+                padding: 30px 0 0 0;
+                gap: 75px;
+            }
+
+            .whole {
+                gap: 30px;
+                width: 100%;
+            }
+
+            .show {
+                width: 100%;
+            }
+
+            .showcase {
+                width: 95%;
+            }
+
+            .creative {
+                padding: 70px 0 0 0;
+            }
+
+            .wider {
+                gap: 80px;
+            }
+
+            .bg-color {
+                padding: 70px 0 0 0;
+                gap: 25px;
+            }
+
+            .services {
+                width: 95%;
+                margin: auto;
+                gap: 30px;
+            }
+
+            .img {
+                height: 210px;
+            }
+
+            .img i {
+                top: 145px;
+            }
+
+            .idea {
+                gap: 8px;
+                padding: 0 15px 15px 15px;
+            }
+
+            .idea p {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            .idea a {
+                font-size: 13px;
+                height: 35px;
+                line-height: 35px;
+                width: 100px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 70px;
+            }
+
+            .foot {
+                width: 95%;
+                margin: auto;
+                flex-wrap: nowrap;
+                gap: 35px;
+            }
+
+            .foot1 {
+                gap: 20px;
+                width: 22%;
+            }
+
+            .control {
+                width: 200px;
+            }
+
+            #foot {
+                width: 35%;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:992px) {
+            .logo {
+                width: 25%;
+                justify-content: center;
+            }
+
+            .list li a {
+                font-size: 15px;
+            }
+
+            .list li a {
+                font-size: 17px;
+            }
+
+            .image {
+                height: 90vh;
+            }
+
+            .text {
+                height: 90vh;
+            }
+
+            .text h1 {
+                font-size: 30px;
+                line-height: 37px;
+            }
+
+            .text p {
+                font-size: 12px;
+            }
+
+            #slider figure .image {
+                height: 90vh;
+            }
+
+            .main {
+                gap: 30px;
+            }
+
+            .content {
+                width: 95%;
+                margin: auto;
+                height: auto;
+                justify-content: center;
+                gap: 35px;
+                flex-wrap: wrap;
+            }
+
+            .dream {
+                margin: 70px 0 0 0;
+                gap: 16px;
+            }
+
+            .h1 h1 {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+            .dream p {
+                font-size: 17px;
+            }
+
+            .slider {
+                width: 90%;
+                height: 28rem;
+            }
+
+            #slide1 {
+                height: 28rem;
+            }
+
+            #slide2 {
+                height: 28rem;
+            }
+
+            #slide3 {
+                height: 28rem;
+            }
+
+            #slide4 {
+                height: 28rem;
+            }
+
+            .para {
+                width: 90%;
+                /* height: 28rem; */
+                justify-content: normal;
+                gap: 8px;
+                height: auto;
+            }
+
+            .para h6 {
+                font-size: 17px;
+            }
+
+            .para h4 {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .para p {
+                font-size: 15px;
+            }
+
+            .para a {
+                height: 44px;
+                line-height: 44px;
+                width: 130px;
+            }
+
+            .head h3 {
+                font-size: 45px;
+                line-height: 55px;
+            }
+
+            .wide {
+                margin-top: 70px;
+                padding: 30px 0 0 0;
+                gap: 45px;
+            }
+
+            .whole {
+                gap: 25px;
+                width: 100%;
+            }
+
+            .show {
+                width: 100%;
+                gap: 15px;
+            }
+
+            .showcase {
+                gap: 15px;
+            }
+
+            .interior {
+                height: 250px;
+            }
+
+            .interior1 {
+                height: 250px;
+            }
+
+            .design {
+                height: 250px;
+            }
+
+            .design1 {
+                height: 250px;
+            }
+
+            .content-dec:after {
+                display: none;
+            }
+
+            .showcase {
+                width: 95%;
+            }
+
+            .container-card {
+                gap: 40px 25px;
+                width: 100%;
+            }
+
+            .creative {
+                padding: 55px 0 0 0;
+            }
+
+            .wider {
+                gap: 50px;
+            }
+
+            .bg-color {
+                padding: 55px 0 0 0;
+                gap: 16px;
+            }
+
+            .box {
+                width: 330px;
+            }
+
+            .services {
+                width: 95%;
+                margin: auto;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .img {
+                height: 210px;
+            }
+
+            .img i {
+                top: 145px;
+            }
+
+            .idea {
+                gap: 8px;
+                padding: 0 15px 15px 15px;
+            }
+
+            .idea h1 {
+                font-size: 22px;
+            }
+
+            .idea p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .idea a {
+                font-size: 13px;
+                height: 35px;
+                line-height: 35px;
+                width: 100px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 70px;
+            }
+
+            .foot {
+                width: 80%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 30px 116px;
+                justify-content: flex-start;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 30%;
+            }
+
+            .control {
+                width: 200px;
+            }
+
+            #foot {
+                width: 50%;
+            }
+
+            .map {
+                display: none;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:768px) {
+            .logo {
+                width: 20%;
+            }
+
+            .logo img {
+                width: 35%;
+            }
+
+            .logo span {
+                font-size: 6px;
+                line-height: 10px;
+            }
+
+            .list li a {
+                font-size: 17px;
+            }
+
+            .image {
+                height: 90vh;
+            }
+
+            .text {
+                height: 90vh;
+            }
+
+            .text h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .text p {
+                font-size: 12px;
+            }
+
+            #slider figure .image {
+                height: 90vh;
+            }
+
+            .main {
+                gap: 28px;
+            }
+
+            .content {
+                width: 95%;
+                margin: auto;
+                height: auto;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .dream {
+                margin: 60px 0 0 0;
+                gap: 14px;
+            }
+
+            .h1 h1 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            .dream p {
+                font-size: 14px;
+            }
+
+            .slider {
+                width: 95%;
+                height: 26rem;
+            }
+
+            #slide1 {
+                height: 26rem;
+            }
+
+            #slide2 {
+                height: 26rem;
+            }
+
+            #slide3 {
+                height: 26rem;
+            }
+
+            #slide4 {
+                height: 26rem;
+            }
+
+            .para {
+                width: 95%;
+                /* height: 28rem; */
+                justify-content: normal;
+                gap: 8px;
+                height: auto;
+            }
+
+            .para h6 {
+                font-size: 16px;
+            }
+
+            .para h4 {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            .para p {
+                font-size: 15px;
+            }
+
+            .para a {
+                height: 44px;
+                line-height: 44px;
+                width: 130px;
+            }
+
+            .head p::before {
+                right: 75px;
+                bottom: 8px;
+                width: 60px;
+            }
+
+            .head p::after {
+                left: 75px;
+                bottom: 8px;
+                width: 60px;
+            }
+
+            .head h3 {
+                font-size: 41px;
+                line-height: 55px;
+            }
+
+            .head p {
+                font-size: 14px;
+            }
+
+            .wide {
+                margin-top: 60px;
+                padding: 25px 0 0 0;
+                gap: 45px;
+            }
+
+            .whole {
+                gap: 20px;
+                width: 100%;
+            }
+
+            .show {
+                width: 100%;
+                gap: 15px;
+            }
+
+            .showcase {
+                gap: 15px;
+                width: 95%;
+                flex-wrap: wrap;
+            }
+
+            .interior {
+                height: 300px;
+                width: 100%;
+            }
+
+            .interior1 {
+                height: 250px;
+                width: 100%;
+            }
+
+            .design {
+                height: 250px;
+                width: 100%;
+            }
+
+            .design1 {
+                height: 300px;
+                width: 100%;
+            }
+
+            .content-dec:after {
+                display: none;
+            }
+
+            .container-card {
+                gap: 40px 25px;
+                width: 100%;
+            }
+
+            .tex span {
+                font-size: 15px;
+            }
+
+            .parallax {
+                height: 350px;
+            }
+
+            .parallax-text {
+                height: 350px;
+            }
+
+            .parallax-text p {
+                font-size: 18px;
+            }
+
+            .parallax-text h1 {
+                font-size: 24px;
+            }
+
+            .creative {
+                padding: 55px 0 0 0;
+            }
+
+            .wider {
+                gap: 50px;
+            }
+
+            .bg-color {
+                padding: 55px 0 0 0;
+                gap: 16px;
+            }
+
+            .box {
+                width: 330px;
+            }
+
+            .services {
+                width: 95%;
+                margin: auto;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .img {
+                height: 210px;
+            }
+
+            .img i {
+                top: 145px;
+            }
+
+            .idea {
+                gap: 8px;
+                padding: 0 15px 15px 15px;
+            }
+
+            .idea h1 {
+                font-size: 22px;
+            }
+
+            .idea p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .idea a {
+                font-size: 13px;
+                height: 35px;
+                line-height: 35px;
+                width: 100px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 55px;
+
+            }
+
+            .foot {
+                width: 90%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 30px 116px;
+                justify-content: flex-start;
+                padding-top: 70px;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 35%;
+            }
+
+            .control {
+                width: 170px;
+                height: 40px;
+                text-indent: 8px;
+            }
+
+            .foot1 li {
+                font-size: 15px;
+            }
+
+            .foot1 p {
+                font-size: 15px;
+            }
+
+            #foot {
+                width: 40%;
+            }
+
+            .map {
+                display: none;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:576px) {
+            .logo {
+                width: 20%;
+            }
+
+            .logo img {
+                width: 50%;
+            }
+
+            .list ul {
+                display: none;
+            }
+
+            .list li a {
+                font-size: 17px;
+            }
+
+            .image {
+                height: 80vh;
+            }
+
+            .text {
+                height: 80vh;
+            }
+
+            .text h1 {
+                font-size: 23px;
+                line-height: 32px;
+            }
+
+            .text p {
+                font-size: 12px;
+            }
+
+            #slider figure .image {
+                height: 80vh;
+            }
+
+            .main {
+                gap: 20px;
+            }
+
+            .content {
+                width: 100%;
+                margin: auto;
+                height: auto;
+                justify-content: center;
+                gap: 22px;
+                flex-wrap: wrap;
+            }
+
+            .dream {
+                margin: 42px 0 0 0;
+                gap: 10px;
+            }
+
+            .h1 h1 {
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            .dream p {
+                font-size: 10px;
+            }
+
+            .slider {
+                width: 95%;
+                height: 21rem;
+            }
+
+            #slide1 {
+                height: 21rem;
+            }
+
+            #slide2 {
+                height: 21rem;
+            }
+
+            #slide3 {
+                height: 21rem;
+            }
+
+            #slide4 {
+                height: 21rem;
+            }
+
+            .para {
+                width: 95%;
+                /* height: 28rem; */
+                justify-content: normal;
+                gap: 8px;
+                height: auto;
+            }
+
+            .para h6 {
+                font-size: 15px;
+            }
+
+            .para h4 {
+                font-size: 24px;
+                line-height: 27px;
+            }
+
+            .para p {
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .para a {
+                height: 35px;
+                line-height: 35px;
+                width: 110px;
+                font-size: 15px;
+            }
+
+            .head h3 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .head p {
+                font-size: 14px;
+                display: none;
+            }
+
+            .wide {
+                margin-top: 50px;
+                padding: 18px 0 0 0;
+                gap: 40px;
+            }
+
+            .whole {
+                gap: 15px;
+                width: 100%;
+            }
+
+            .show {
+                width: 100%;
+                gap: 15px;
+            }
+
+            .showcase {
+                gap: 15px;
+                width: 95%;
+                flex-wrap: wrap;
+            }
+
+            .interior {
+                height: 300px;
+                width: 100%;
+            }
+
+            .interior1 {
+                height: 250px;
+                width: 100%;
+            }
+
+            .design {
+                height: 250px;
+                width: 100%;
+            }
+
+            .design1 {
+                height: 300px;
+                width: 100%;
+            }
+
+            .content-dec:after {
+                display: none;
+            }
+
+            .container-card {
+                gap: 40px 25px;
+                width: 100%;
+            }
+
+            .tex span {
+                font-size: 17px;
+            }
+
+            .parallax {
+                height: 350px;
+            }
+
+            .parallax-text {
+                height: 350px;
+            }
+
+            .parallax-text p {
+                font-size: 16px;
+            }
+
+            .parallax-text h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .creative {
+                padding: 40px 0 0 0;
+            }
+
+            .card-img {
+                width: 300px;
+                height: 240px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+
+            .card-data {
+                width: 232px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .card-description {
+                display: block;
+                font-size: 13px;
+            }
+
+            .class-button {
+                font-size: 14px;
+            }
+
+            .wider {
+                gap: 50px;
+            }
+
+            .bg-color {
+                padding: 45px 0 0 0;
+                gap: 16px;
+            }
+
+            .box {
+                width: 330px;
+            }
+
+            .services {
+                width: 95%;
+                margin: auto;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .img {
+                height: 210px;
+            }
+
+            .img i {
+                top: 145px;
+            }
+
+            .idea {
+                gap: 8px;
+                padding: 0 15px 15px 15px;
+            }
+
+            .idea h1 {
+                font-size: 22px;
+            }
+
+            .idea p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .idea a {
+                font-size: 13px;
+                height: 35px;
+                line-height: 35px;
+                width: 100px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 55px;
+
+            }
+
+            .foot {
+                width: 90%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 40px 0;
+                justify-content: flex-start;
+                padding-top: 70px;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 90%;
+            }
+
+            .control {
+                width: 170px;
+                height: 40px;
+                text-indent: 8px;
+            }
+
+            .foot1 li {
+                font-size: 15px;
+            }
+
+            .foot1 p {
+                font-size: 15px;
+            }
+
+            #foot {
+                width: 90%;
+            }
+
+            .map {
+                display: none;
+            }
+
+        }
     </style>
 </head>
 
@@ -1162,102 +2098,61 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="istockphoto-1341588764-612x612-removebg-preview.png" alt="">
+                <img src="Green_Simple_Sustainable_House_Logo_20241113_190254_0000-removebg-preview.png" alt="">
             </div>
             <div class="list">
                 <ul>
                     <li><a id="home" href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about us.html">About Us</a></li>
                     <li><a href="contact us.html">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-        <!-- <div class="slider">
-            <div class="slide" id="slide1">
+
+    <div id="slider">
+        <figure>
+            <div class="image" id="image1">
                 <div class="text">
                     <p>Futurestic Elegance</p>
                     <h1>Designing Spaces,</h1>
                     <h1>Creating Experiences</h1>
                 </div>
             </div>
-            <div class="slide" id="slide2">
+            <div class="image" id="image2">
                 <div class="text">
                     <p>Ancient Elegance</p>
-                    <h1>Ancient Design</h1>
-                    <h1>with Modern Touch</h1>
+                    <h1>Modern Meets</h1>
+                    <h1> Ancient Elegance</h1>
                 </div>
             </div>
-            <div class="slide" id="slide3">
+            <div class="image" id="image3">
                 <div class="text">
                     <p>Great design is transparent</p>
                     <h1>Expertly Crafting</h1>
                     <h1>your Dreams</h1>
                 </div>
             </div>
-            <div class="slide" id="slide4">
+            <div class="image" id="image4">
                 <div class="text">
                     <p>Good design is obvious</p>
                     <h1>Simplicity is the</h1>
                     <h1> Ultimate Sophistication</h1>
                 </div>
             </div>
-            <div class="slide" id="slide5">
+            <div class="image" id="image5">
                 <div class="text">
-                    <p>Luxury is in each detail</p>
-                    <h1>Transforming ideas</h1>
-                    <h1>into Structure</h1>
+                    <p>Futurestic Elegance</p>
+                    <h1>Designing Spaces,</h1>
+                    <h1>Creating Experiences</h1>
                 </div>
             </div>
-        </div> -->
-        <div id="slider">
-            <figure>
-                <div class="image"
-                    style=" background-image: url('image-modern2.jpg'); width: 20%;height: 100vh;background-size: cover; background-position: center;">
-                    <div class="text">
-                        <p>Futurestic Elegance</p>
-                        <h1>Designing Spaces,</h1>
-                        <h1>Creating Experiences</h1>
-                    </div>
-                </div>
-                <div class="image"
-                    style="background-image:url('image-ottoman.jpg'); width: 20%;height: 100vh;background-size: cover;background-position: center;">
-                    <div class="text">
-                        <p>Ancient Elegance</p>
-                        <h1>Modern Meets</h1>
-                        <h1> Ancient Elegance</h1>
-                    </div>
-                </div>
-                <div class="image"
-                    style="background-image: url('image-modern-bed.jpg'); width: 20%;height: 100vh;background-size: cover;background-position: center;">
-                    <div class="text">
-                        <p>Great design is transparent</p>
-                        <h1>Expertly Crafting</h1>
-                        <h1>your Dreams</h1>
-                    </div>
-                </div>
-                <div class="image"
-                    style="background-image: url('image-kitchen.jpg');width: 20%;height: 100vh;background-size: cover;background-position: center;">
-                    <div class="text">
-                        <p>Good design is obvious</p>
-                        <h1>Simplicity is the</h1>
-                        <h1> Ultimate Sophistication</h1>
-                    </div>
-                </div>
-                <div class="image"
-                    style=" background-image: url('image-modern2.jpg'); width: 20%;height: 100vh;background-size: cover;background-position: center;">
-                    <div class="text">
-                        <p>Futurestic Elegance</p>
-                        <h1>Designing Spaces,</h1>
-                        <h1>Creating Experiences</h1>
-                    </div>
-                </div>
-            </figure>
-        </div>
+        </figure>
+    </div>
     <section>
-        <div class="map" style="z-index: -1; position: absolute;left: 60%;top: 100%;">
+        <div class="map" style="z-index: -1; position: absolute;left: 50%;top: 100%;">
             <img src="map_bg.png" alt="">
         </div>
         <div class="main">
@@ -1306,66 +2201,66 @@
                         bring visions to life.Our team of passionate interior designers is dedicated to bringing your
                         vision
                         to life with personalized, stylish, and innovative solutions. </p>
-                    <a href="#">Read more</a>
+                    <a href="services.html">Read more</a>
                 </div>
             </div>
         </div>
     </section>
     <section>
         <div class="wide">
-        <div class="whole">
-            <div class="head">
-                <h1>Showcase</h1>
-                <p>Queit space</p>
+            <div class="whole">
+                <div class="head">
+                    <h3>Showcase</h3>
+                    <p>Queit space</p>
+                </div>
+                <div class="show">
+                    <div class="showcase">
+                        <div class="interior">
+                            <img src="image-white2.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Elegant Transformations </span></div>
+                            </div>
+                        </div>
+                        <div class="design">
+                            <img src="image-whitekitchen2.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Kitchen Perfection Designs</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase">
+                        <div class="interior1">
+                            <img src="image-bathroom.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Serene Splash</span></div>
+                            </div>
+                        </div>
+                        <div class="design1">
+                            <img src="image-office.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Modern Mindscapes</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase">
+                        <div class="interior">
+                            <img src="image-whitebed2.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Modern Bedroom Concepts</span></div>
+                            </div>
+                        </div>
+                        <div class="design">
+                            <img src="image-whitedine.jpg" alt="">
+                            <div class="overlay">
+                                <div class="tex"><span>Elegant Dining Spaces</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="show">
-                <div class="showcase">
-                    <div class="interior">
-                        <img src="image-white2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Elegant Transformations </span></div>
-                        </div>
-                    </div>
-                    <div class="design">
-                        <img src="image-whitekitchen2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Kitchen Perfection Designs</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase">
-                    <div class="interior1">
-                        <img src="image-bathroom.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Serene Splash</span></div>
-                        </div>
-                    </div>
-                    <div class="design1">
-                        <img src="image-office.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Modern Mindscapes</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase">
-                    <div class="interior">
-                        <img src="image-whitebed2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Modern Bedroom Concepts</span></div>
-                        </div>
-                    </div>
-                    <div class="design">
-                        <img src="image-whitedine.jpg" alt="">
-                        <div class="overlay">
-                            <div class="tex"><span>Elegant Dining Spaces</span></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="showcase">
+                <div class="content-dec"><span></span></div>
             </div>
-        </div>
-        <div class="showcase">
-            <div class="content-dec"><span></span></div>
-        </div>
         </div>
     </section>
     <section>
@@ -1378,74 +2273,80 @@
     </section>
     <section>
         <div class="creative">
-        <div class="head">
-            <h1>Creative Highlights</h1>
-            <p>latest Project</p>
-        </div>
-        <div class="whole">
-            <div class="container">
-                <div class="container-card">
-                    <article class="card-article">
-                        <img src="modern-styled-entryway (1).jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">Modern Muse Lounge</h2>
-                            <span class="card-description">Step into our masterpiece, where art meets elegance in every curve
-                                and detail.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
-        
-                    <article class="card-article">
-                        <img src="image-modern-bed3.jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">The Zen Haven</h2>
-                            <span class="card-description">A sanctuary of elegance and tranquility, where nature meets modern luxury.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
-        
-                    <article class="card-article">
-                        <img src="view-light-lamp-with-futuristic-design.jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">Skyline Lounge</h2>
-                            <span class="card-description">A sleek fusion of modern elegance and urban allure, where the city skyline becomes part of the art.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
-                <!-- </div>
+            <div class="head">
+                <h3>Creative Highlights</h3>
+                <p>latest Project</p>
+            </div>
+            <div class="whole">
+                <div class="container">
+                    <div class="container-card">
+                        <article class="card-article">
+                            <img src="modern-styled-entryway (1).jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">Modern Muse Lounge</h2>
+                                <span class="card-description">Step into our masterpiece, where art meets elegance in
+                                    every curve
+                                    and detail.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="card-article">
+                            <img src="image-modern-bed3.jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">The Zen Haven</h2>
+                                <span class="card-description">A sanctuary of elegance and tranquility, where nature
+                                    meets modern luxury.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="card-article">
+                            <img src="view-light-lamp-with-futuristic-design.jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">Skyline Lounge</h2>
+                                <span class="card-description">A sleek fusion of modern elegance and urban allure, where
+                                    the city skyline becomes part of the art.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+                        <!-- </div>
             </div>
             <div class="container"> 
                 <div class="container-card"> -->
-                    <article class="card-article">
-                        <img src="modern-styled-entryway (3).jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">Serenity Space</h2>
-                            <span class="card-description"> A sophisticated space designed for relaxation, where comfort meets style.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
-        
-                    <article class="card-article">
-                        <img src="minimalist-office-interior-design.jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">Creative Quarter</h2>
-                            <span class="card-description"> A dynamic workspace designed to inspire creativity, collaboration, and productivity.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
-        
-                    <article class="card-article">
-                        <img src="image-kitchen-black.jpg" alt="" class="card-img">
-                        <div class="card-data">
-                            <h2 class="card-title">Culinary Haven</h2>
-                            <span class="card-description">a modern kitchen space designed to elevate every cooking experience with style and functionality.</span>
-                            <a href="#" class="class-button">Read More</a>
-                        </div>
-                    </article>
+                        <article class="card-article">
+                            <img src="modern-styled-entryway (3).jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">Serenity Space</h2>
+                                <span class="card-description"> A sophisticated space designed for relaxation, where
+                                    comfort meets style.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="card-article">
+                            <img src="minimalist-office-interior-design.jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">Creative Quarter</h2>
+                                <span class="card-description"> A dynamic workspace designed to inspire creativity,
+                                    collaboration, and productivity.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="card-article">
+                            <img src="image-kitchen-black.jpg" alt="" class="card-img">
+                            <div class="card-data">
+                                <h2 class="card-title">Culinary Haven</h2>
+                                <span class="card-description">a modern kitchen space designed to elevate every cooking
+                                    experience with style and functionality.</span>
+                                <a href="#" class="class-button">Read More</a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="projects">
+            <!-- <div class="projects">
         <div class="project">
             <div class="latest">
                 <img src="modern-styled-entryway (1).jpg" alt="">
@@ -1469,60 +2370,62 @@
             </div>
         </div>
     </div> -->
-</div>
-</div>
+        </div>
+        </div>
     </section>
     <section>
         <div class="wider">
-        <div class="bg-color">
-            <div class="head">
-                <h1>Transformations</h1>
-                <p>Our Service</p>
+            <div class="bg-color">
+                <div class="head">
+                    <h3>Transformations</h3>
+                    <p>Our Service</p>
+                </div>
+                <div class="services">
+                    <div class="box">
+                        <div class="img">
+                            <img src="image-white1.jpg" alt="">
+                            <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
+                        </div>
+                        <div class="idea">
+                            <h1>Living Room</h1>
+                            <p>Transform your living room into a haven of relaxation and sophistication. We blend
+                                creativity
+                                with comfort to create spaces that reflect your personality</p>
+                            <a href="gallery.html">View Details</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="room-interior-hotel-bedroom (3).jpg" alt="">
+                            <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
+                        </div>
+                        <div class="idea">
+                            <h1>Bedroom</h1>
+                            <p>A space where dreams come to life. We design bedrooms that offer serenity, elegance, and
+                                a
+                                sense of calm, tailored to your needs.</p>
+                            <a href="gallery.html">View Details</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="image-office1.jpg" alt="">
+                            <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
+                        </div>
+                        <div class="idea">
+                            <h1>Office</h1>
+                            <p>Transform your workspace into a hub of creativity with a thoughtfully designed office
+                                interior. Our designs focus on aesthetics, every corner inspires innovation.
+                            </p>
+                            <a href="gallery.html" class="hover-effect">View Details</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="services">
-                <div class="box">
-                    <div class="img">
-                        <img src="image-white1.jpg" alt="">
-                        <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
-                    </div>
-                    <div class="idea">
-                        <h1>Living Room</h1>
-                        <p>Transform your living room into a haven of relaxation and sophistication. We blend creativity
-                            with comfort to create spaces that reflect your personality</p>
-                        <a href="#">View Details</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <img src="room-interior-hotel-bedroom (3).jpg" alt="">
-                        <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
-                    </div>
-                    <div class="idea">
-                        <h1>Bedroom</h1>
-                        <p>A space where dreams come to life. We design bedrooms that offer serenity, elegance, and a
-                            sense of calm, tailored to your needs.</p>
-                        <a href="#">View Details</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img">
-                        <img src="image-office1.jpg" alt="">
-                        <i class="fa-regular fa-heart" style="color: #c8a676;"></i>
-                    </div>
-                    <div class="idea">
-                        <h1>Office</h1>
-                        <p>Transform your workspace into a hub of creativity with a thoughtfully designed office
-                            interior. Our designs focus on aesthetics, ensuring that every corner inspires innovation.
-                        </p>
-                        <a href="#" class="hover-effect">View Details</a>
-                    </div>
-                </div>
+                <div class="content-dec" id="span"><span></span></div>
+            </div>
         </div>
-        </div>
-        <div class="services">
-            <div class="content-dec" id="span"><span></span></div>
-        </div>
-    </div>
     </section>
     <footer>
         <div class="footer">
@@ -1551,11 +2454,11 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about us.html">About Us</a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact us.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="foot1">
+                <div class="foot1" id="foot">
                     <h2>Subscribe</h2>
                     <p>Want to be notified. Just sign up and we'll send you a notification by email.</p>
                     <form>
@@ -1569,20 +2472,21 @@
                 </div>
             </div>
             <div class="fun">
-            <div class="icons">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #c8a676;"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram" style="color: #c8a676;"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter" style="color: #c8a676;"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #c8a676;"></i></a></li>
-                </ul>
-            </div>
-            <div class="rights">
-                <p><i class="fa-regular fa-copyright" style="color: #ffffff;font-size: 13px;"></i> INTERIOR 2024. ALL
-                    RIGHTS RESERVED.</p>
+                <div class="icons">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #c8a676;"></i></a></li>
+                    </ul>
+                </div>
+                <div class="rights">
+                    <p><i class="fa-regular fa-copyright" style="color: #ffffff;font-size: 13px;"></i> INTERIOR 2024.
+                        ALL
+                        RIGHTS RESERVED.</p>
+                </div>
             </div>
         </div>
-    </div>
     </footer>
 </body>
 

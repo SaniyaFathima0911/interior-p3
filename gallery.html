@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" href="logof.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 0 8px;
+        }
+
+        .logo img {
+            width: 21%;
+            filter: brightness(0.7);
+        }
+
+
+        .list ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .list li {
+            list-style: none;
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: #211f2c;
+            font-family: "Jost", sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .list li a:hover {
+            color: #c8a676;
+        }
+
+        #gallery {
+            color: #c8a676;
+        }
+
+        .video {
+            width: 100%;
+            height: 65vh;
+            background-image: url("image-blackbed.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            width: 100%;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(50, 50, 50, 0.7);
+            background-color: rgb(0 0 0 / 40%);
+            font-family: 'poppins', sans-serif;
+            filter: brightness(1);
+            /* position: relative; */
+        }
+
+        .header h1 {
+            font-size: 50px;
+            color: #f9f9f9;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: rgb(206, 206, 206);
+        }
+
+        .whole {
+            max-width: 2100px;
+            margin: 80px 0 0 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            gap: 90px;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .gallery {
+            position: relative;
+            overflow: hidden;
+            width: 350px;
+            height: 270px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .img-original,
+        .img-reveal {
+            display: block;
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .img-reveal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+        }
+
+        .gallery:hover .img-reveal {
+            transform: translateY(0);
+        }
+
+        .content-dec {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 36px;
+            z-index: 10;
+            margin-left: -18px;
+        }
+
+        .content-dec:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: #c8a676;
+            border-radius: 50%;
+            margin-left: -3px;
+            z-index: 10;
+        }
+
+        .content-dec:after {
+            content: '';
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            width: 1px;
+            height: 25px;
+            background: #bbb9b9;
+            z-index: 10;
+        }
+
+        .content-dec span {
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            background: #ffffff;
+            z-index: 1;
+            transform: rotate(45deg);
+            box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
+        }
+
+        .footer {
+            background-color: #272535;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            /* height: 450px; */
+        }
+
+        .foot {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 80px 0 0 0;
+        }
+
+        .foot1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .foot1 h2 {
+            color: #c4a676;
+            font-family: "Playfair", serif;
+            font-weight: inherit;
+            font-size: 24px;
+        }
+
+        .foot1 li {
+            color: #f9f9f9;
+            line-height: 30px;
+            list-style: none;
+            font-family: "Jost", sans-serif;
+        }
+
+        .foot1 a {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+        .foot1 a:hover {
+            color: #c8a676;
+            text-decoration: underline;
+        }
+
+        .foot1 p {
+            color: white;
+            font-family: "Jost", sans-serif;
+        }
+
+        .form {
+            display: flex;
+        }
+
+        .control {
+            display: block;
+            width: 50%;
+            padding: 10px 10px;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: white;
+            background-color: #ffffff30;
+            background-clip: padding-box;
+            border: 1px solid #676767;
+            appearance: none;
+            border-top-left-radius: .375rem;
+            border-bottom-left-radius: .375rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            outline: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            border: 0;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            font-size: 1rem;
+            line-height: 1rem;
+            justify-content: center;
+            padding: .1rem 1rem;
+            color: #141414;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            --box-shadow-color: #c8a676;
+            background-color: #c8a676;
+        }
+
+        .control::placeholder {
+            color: white;
+            font-size: 14px;
+        }
+
+        .icons {
+            background-color: #211f2c;
+            height: 60px;
+            border-bottom: 1px solid rgba(79, 79, 79, 0.836);
+        }
+
+        .icons ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icons li {
+            list-style: none;
+            line-height: 60px;
+        }
+
+        .icons i {
+            font-size: 18px;
+            transition: 0.5s ease;
+        }
+
+        .icons i:hover {
+            transform: scale(1.5);
+        }
+
+        .rights {
+            height: 50px;
+            background-color: #211f2c;
+        }
+
+        .rights p {
+            color: white;
+            font-family: "Jost", sans-serif;
+            font-size: 13px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        @media (min-width:992px) and (max-width:1200px) {
+            .header h1 {
+                font-size: 45px;
+                color: #f9f9f9;
+                line-height: 54px;
+            }
+
+            .whole {
+                width: 100%;
+                margin: 70px 0 0 0;
+                gap: 75px;
+            }
+
+            .container {
+                width: 98%;
+                margin: auto;
+                gap: 20px;
+            }
+
+            .gallery {
+                width: 300px;
+                height: 235px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 70px;
+            }
+
+            .foot {
+                width: 95%;
+                margin: auto;
+                flex-wrap: nowrap;
+                gap: 35px;
+            }
+
+            .foot1 {
+                gap: 20px;
+                width: 22%;
+            }
+
+            .control {
+                width: 170px;
+            }
+
+            #foot {
+                width: 35%;
+            }
+        }
+
+        @media (min-width:786px) and (max-width:992px) {
+            .logo {
+                width: 25%;
+                justify-content: center;
+            }
+
+            .list li a {
+                font-size: 15px;
+            }
+
+            .list li a {
+                font-size: 17px;
+            }
+
+            .header h1 {
+                font-size: 42px;
+                color: #f9f9f9;
+                line-height: 45px;
+            }
+
+            .header p {
+                font-size: 13px;
+            }
+
+            .map {
+                display: none;
+            }
+
+            .whole {
+                width: 100%;
+                margin: 70px 0 0 0;
+                gap: 75px;
+            }
+
+            .container {
+                width: 98%;
+                margin: auto;
+                gap: 20px;
+            }
+
+            .gallery {
+                width: 300px;
+                height: 235px;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 70px;
+            }
+
+            .foot {
+                width: 80%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 30px 116px;
+                justify-content: flex-start;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 30%;
+            }
+
+            .control {
+                width: 200px;
+            }
+
+            #foot {
+                width: 50%;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:786px) {
+            .logo {
+                width: 20%;
+            }
+
+            .logo img {
+                width: 35%;
+            }
+
+            .list {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 38px;
+                color: #f9f9f9;
+                line-height: 45px;
+            }
+
+            .header p {
+                font-size: 11px;
+            }
+
+            .whole {
+                width: 100%;
+                margin: 50px 0 0 0;
+                gap: 50px;
+            }
+
+            .container {
+                width: 98%;
+                margin: auto;
+                gap: 20px;
+            }
+
+            .gallery {
+                width: 250px;
+                height: 200px;
+            }
+
+            .content-dec:after {
+                display: none;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 55px;
+
+            }
+
+            .foot {
+                width: 90%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 30px 116px;
+                justify-content: flex-start;
+                padding-top: 70px;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 35%;
+            }
+
+            .control {
+                width: 170px;
+                height: 40px;
+                text-indent: 8px;
+            }
+
+            .foot1 li {
+                font-size: 15px;
+            }
+
+            .foot1 p {
+                font-size: 15px;
+            }
+
+            #foot {
+                width: 40%;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:576px) {
+            .logo {
+                width: 20%;
+            }
+
+            .logo img {
+                width: 50%;
+            }
+            .list {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 32px;
+                color: #f9f9f9;
+                line-height: 45px;
+            }
+
+            .header p {
+                font-size: 9px;
+                text-align: center;
+            }
+
+            .whole {
+                width: 100%;
+                margin: 50px 0 0 0;
+                gap: 50px;
+            }
+
+            .container {
+                width: 98%;
+                margin: auto;
+                gap: 20px;
+            }
+
+            .gallery {
+                width: 280px;
+                height: 210px;
+            }
+
+            .content-dec:after {
+                display: none;
+            }
+
+            .footer {
+                width: 100%;
+                gap: 55px;
+
+            }
+
+            .foot {
+                width: 90%;
+                margin: auto;
+                flex-wrap: wrap;
+                gap: 40px 0;
+                justify-content: flex-start;
+                padding-top: 70px;
+            }
+
+            .foot1 {
+                gap: 15px;
+                width: 90%;
+            }
+
+            .control {
+                width: 170px;
+                height: 40px;
+                text-indent: 8px;
+            }
+
+            .foot1 li {
+                font-size: 15px;
+            }
+
+            .foot1 p {
+                font-size: 15px;
+            }
+
+            #foot {
+                width: 90%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Green_Simple_Sustainable_House_Logo_20241113_190254_0000-removebg-preview.png" alt="">
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a id="gallery" href="gallery">Gallery</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="video">
+            <div class="header">
+                <h1>Gallery</h1>
+                <p>A gallery is a curated collection of images or artworks.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="whole">
+            <div class="container">
+                <div class="gallery">
+                    <img class="img-original" src="view-futuristic-lighting-lamp-design (2).jpg" alt="">
+                    <img class="img-reveal" src="modern-living-room-interior-design (5).jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original"
+                        src="living-room-with-large-blue-sofa-large-coffee-table-with-large-window-that-says-room-is-decorated-with-large-plant.jpg"
+                        alt="">
+                    <img class="img-reveal" src="living-room-with-blue-sofa-painting-wall.jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="modern-styled-entryway.jpg" alt="">
+                    <img class="img-reveal" src="modern-styled-small-entryway.jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="image-diamant.jpg" alt="">
+                    <img class="img-reveal" src="image-classical-bed.jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="bright-modern-bedroom-with-elegance-generated-by-ai.jpg" alt="">
+                    <img class="img-reveal"
+                        src="cozy-modern-bedroom-with-comfortable-bed-elegant-decor-wide-window-generated-by-artificial-intelligence.jpg"
+                        alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original"
+                        src="modern-living-room-with-elegant-decor-comfortable-sofa-generative-ai.jpg" alt="">
+                    <img class="img-reveal" src="view-luxurious-hotel-interior-space (1).jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="interior-design-neoclassical-style-with-furnishings-decor (15).jpg"
+                        alt="">
+                    <img class="img-reveal" src="interior-design-neoclassical-style-with-furnishings-decor (16).jpg"
+                        alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="modern-minimalist-office (2).jpg" alt="">
+                    <img class="img-reveal" src="modern-minimalist-office (7).jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img class="img-original" src="image-cozy.jpg" alt="">
+                    <img class="img-reveal" src="modern-living-room-interior-design (4).jpg" alt="">
+                </div>
+            </div>
+            <div class="cont">
+                <div class="content-dec" id="span"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="foot">
+                <div class="foot1">
+                    <h2>Contact info</h2>
+                    <ul>
+                        <li>Call :+90 216 5463546</li>
+                        <li>Email :interiordesign@gmail.com</li>
+                        <li>Find Us :Istiklal Street, Turkiye </li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Residential Design</a></li>
+                        <li><a href="#">Commercial Design</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Renovation Services</a></li>
+                        <li><a href="#">Lighting Design</a></li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Helpful links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about us.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="foot1">
+                    <h2>Subscribe</h2>
+                    <p>Want to be notified. Just sign up and we'll send you a notification by email.</p>
+                    <form>
+                        <div class="form">
+                            <input type="email" name="myEmail" placeholder="Your Email" class="control" required="">
+                            <button type="submit" class="btn"><i class="fa-solid fa-arrow-right"
+                                    style="color: #000000;"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="free">
+                <div class="icons">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter" style="color: #c8a676;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in" style="color: #c8a676;"></i></a></li>
+                    </ul>
+                </div>
+                <div class="rights">
+                    <p><i class="fa-regular fa-copyright" style="color: #ffffff;font-size: 13px;"></i> INTERIOR 2024.
+                        ALL
+                        RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
