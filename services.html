@@ -43,16 +43,16 @@
             filter: brightness(0.7);
         }
 
-        .list ul {
+        .nav-links{
             display: flex;
             gap: 30px;
         }
 
-        .list li {
+        .nav-links li {
             list-style: none;
         }
 
-        .list li a {
+        .nav-links li a {
             text-decoration: none;
             color: #211f2c;
             font-family: "Jost", sans-serif;
@@ -60,7 +60,7 @@
             font-weight: 600;
         }
 
-        .list li a:hover {
+        .nav-links li a:hover {
             color: #c8a676;
         }
 
@@ -742,7 +742,7 @@
             }
 
             .logo img {
-                width: 35%;
+                width: 50px;
             }
 
             .list {
@@ -919,7 +919,7 @@
             }
 
             .logo img {
-                width: 50%;
+                width: 45px;
             }
             .list {
                 display: none;
@@ -1109,6 +1109,37 @@
                 width: 90%;
             }
         }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 55px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                z-index: 1;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                transition: left 0.3s ease-in-out;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-toggle:checked+.menu-icon+.nav-links {
+                left: 0;
+            }
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
     </style>
 </head>
 
@@ -1118,15 +1149,15 @@
             <div class="logo">
                 <a href="services.html"><img src="Green_Simple_Sustainable_House_Logo_20241113_190254_0000-removebg-preview.png" alt=""></a>
             </div>
-            <div class="list">
-                <ul>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about us.html">About Us</a></li>
                     <li><a id="services" href="services.html">Services</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact us.html">Contact Us</a></li>
                 </ul>
-            </div>
         </nav>
     </header>
     <section>

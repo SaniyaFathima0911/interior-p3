@@ -49,16 +49,16 @@
             padding: 2px 0;
         }
 
-        .list ul {
+        .nav-links {
             display: flex;
             gap: 30px;
         }
 
-        .list li {
+        .nav-links li {
             list-style: none;
         }
 
-        .list li a {
+        .nav-links a {
             text-decoration: none;
             color: #211f2c;
             font-family: "Jost", sans-serif;
@@ -66,12 +66,22 @@
             font-weight: 600;
         }
 
-        .list li a:hover {
+        .nav-links a:hover {
             color: #c8a676;
         }
 
         #home {
             color: #c8a676;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
         }
 
         #slider {
@@ -1478,7 +1488,7 @@
             }
 
             .logo img {
-                width: 35%;
+                width: 50px;
             }
 
             .logo span {
@@ -1780,7 +1790,7 @@
             }
 
             .logo img {
-                width: 50%;
+                width: 45px;
             }
 
             .list ul {
@@ -2091,6 +2101,29 @@
             }
 
         }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 55px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                z-index: 1;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                transition: left 0.3s ease-in-out;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-toggle:checked+.menu-icon+.nav-links {
+                left: 0;
+            }
+        }
     </style>
 </head>
 
@@ -2098,17 +2131,18 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-            <a href="index.html"><img src="Green_Simple_Sustainable_House_Logo_20241113_190254_0000-removebg-preview.png" alt=""></a> 
+                <a href="index.html"><img
+                        src="Green_Simple_Sustainable_House_Logo_20241113_190254_0000-removebg-preview.png" alt=""></a>
             </div>
-            <div class="list">
-                <ul>
-                    <li><a id="home" href="index.html">Home</a></li>
-                    <li><a href="about us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact us.html">Contact Us</a></li>
-                </ul>
-            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -2168,17 +2202,6 @@
                 </div>
             </div>
             <div class="content">
-                <!-- <div class="slideshow-container">
-                <div class="slides">
-                    <img src="image-blue-yellow.jpg" alt="Image 1">
-                </div>
-                <div class="slides">
-                    <img src="image-green.jpg" alt="Image 2">
-                </div>
-                <div class="slides">
-                    <img src="image-modern-bed2.jpg" alt="Image 3">
-                </div>
-            </div> -->
                 <div class="slider">
                     <div class="slide" id="slide1">
                     </div>
@@ -2310,10 +2333,6 @@
                                 <a href="#" class="class-button">Read More</a>
                             </div>
                         </article>
-                        <!-- </div>
-            </div>
-            <div class="container"> 
-                <div class="container-card"> -->
                         <article class="card-article">
                             <img src="modern-styled-entryway (3).jpg" alt="" class="card-img">
                             <div class="card-data">
@@ -2346,30 +2365,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="projects">
-        <div class="project">
-            <div class="latest">
-                <img src="modern-styled-entryway (1).jpg" alt="">
-            </div>
-            <div class="latest">
-                <img src="image-kitchen-black.jpg" alt="">
-            </div>
-            <div class="latest">
-                <img src="view-futuristic-lighting-lamp-design (2).jpg" alt="">
-            </div>
-        </div>
-        <div class="project">
-            <div class="latest">
-                <img src="image-modern-bed3.jpg" alt="">
-            </div>
-            <div class="latest">
-                <img src="minimalist-office-interior-design.jpg" alt="">
-            </div>
-            <div class="latest">
-                <img src="modern-styled-entryway (3).jpg" alt="">
-            </div>
-        </div>
-    </div> -->
         </div>
         </div>
     </section>
