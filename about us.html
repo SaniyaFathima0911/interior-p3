@@ -40,11 +40,13 @@
         .logo img {
             width: 21%;
             filter: brightness(0.7);
+            padding: 2px 0;
         }
 
         .nav-links {
             display: flex;
             gap: 30px;
+            padding-right: 12px;
         }
 
         .nav-links li {
@@ -65,6 +67,15 @@
 
         #about {
             color: #c8a676;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
         }
 
         .about {
@@ -1017,15 +1028,6 @@
             .menu-toggle:checked+.menu-icon+.nav-links {
                 left: 0;
             }
-        }
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .menu-toggle {
-            display: none;
         }
     </style>
 </head>

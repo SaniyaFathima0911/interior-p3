@@ -41,11 +41,13 @@
         .logo img {
             width: 21%;
             filter: brightness(0.7);
+            padding: 2px 0;
         }
 
         .nav-links{
             display: flex;
             gap: 30px;
+            padding-right: 12px;
         }
 
         .nav-links li {
@@ -62,6 +64,15 @@
 
         .nav-links li a:hover {
             color: #c8a676;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
         }
 
         .head {
@@ -292,8 +303,8 @@
         }
 
         .lists p {
-            color: rgba(186, 183, 183, 0.831);
-            font-size: 15px;
+           color: rgb(183 181 181);
+            font-size: 16px;
         }
 
         .lists ul {
@@ -312,7 +323,7 @@
 
         .lists li h3 {
             color: white;
-            font-size: 18px;
+            font-size: 19px;
         }
 
         .button {
@@ -1130,15 +1141,6 @@
             .menu-toggle:checked+.menu-icon+.nav-links {
                 left: 0;
             }
-        }
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .menu-toggle {
-            display: none;
         }
     </style>
 </head>
